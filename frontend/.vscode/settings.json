@@ -1,0 +1,4 @@
+{
+    "emmet.systaxProfiles":{"javascript": "jsx"},
+    "emmet.includeLanguages":{"javascript": "javascriptreact"}
+}
