@@ -26,7 +26,7 @@ export default function Detail(){
 
     function sendMail(){
         MailComposer.composeAsync({
-            subject: `Héroi do caso: ${incident.title}`,
+            subject: `Herói do caso: ${incident.title}`,
             recipients: [incident.email],
             body: message
         })
@@ -50,9 +50,7 @@ export default function Detail(){
             <View style={styles.incident}>
                 <Text style={[styles.incidentProperty, {marginTop: 0 }]}>ONG:</Text>
                 <Text style={styles.incidentValue}>
-                    {incident.name} de 
-                    {incident.city} /
-                    {incident.uf}
+                    {incident.name} de {incident.city} / {incident.uf}
                 </Text>
                 
                 <Text style={styles.incidentProperty}>CASO:</Text>
@@ -66,6 +64,8 @@ export default function Detail(){
                         }).format(incident.value)
                     }
                 </Text>
+                <Text style={styles.incidentProperty}>DESCRIÇÂO DO CASO:</Text>
+                <Text style={styles.incidentValue}>{incident.description}</Text>
             </View>
 
             <View style={styles.contactBox}>
